@@ -1,0 +1,10 @@
+ODIAG_COM  OCEAN_COM  OGEOM         ! dynamic ocean modules
+OCNDYN  OCNDYN2  OTIDELL  OWALL     ! dynamic ocean routines
+OCN_Interp                          ! dynamic ocean routines
+OSTRAITS OCNKPP                     ! dynamic ocean routines
+OCNMESO_DRV OCNTDMIX OCNGM          ! ocean mesoscale mixing
+OCEANR_DIM AFLUXES OFLUXES
+ODIAG_PRT                           ! ocean diagnostic print out
+OCNFUNTAB                           ! ocean function look up table
+SparseCommunicator_mod              ! sparse gather/scatter module
+OCNQUS                              ! routines for advection using the QUS

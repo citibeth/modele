@@ -1,0 +1,42 @@
+!--------- dust aerosol parameters----------------
+imDust=0                          ! 0: PDF emission scheme, 1: AEROCOM
+adiurn_dust=0                     ! 1: daily dust diagnostics for selected grid boxes
+!to_conc_soildust=1   ! three-dimensional dust output as concentration [kg/m^3]
+! Dust emission parameters with different choices depending on model configuration (uncomment the needed one, comment out the others):
+
+!! Tcadi
+! Tcadi w/o VMP clouds (comment out when model is run with VMP clouds):
+fracClayPDFscheme=0.0308321981714  ! clay emission parameter from calibration
+fracSiltPDFscheme=0.0476329957222  ! silt emission parameter from calibration
+  !fracClayPDFscheme = 0.5*0.0294128395792[1] * 1.054[2] + 0.5*0.0292867845524[3] * 1.047[4]
+  !fracSiltPDFscheme = 0.5*0.0518615507181[1] * 0.894[2] + 0.5*0.0500018048081[3] * 0.978[4]
+  ![1] emission parameters used for calibration run E72TcadiF40pi_2000
+  ![2] optimization factors calculated from calibration run E72TcadiF40pi_2000
+  ![3] emission parameters used for calibration run E74TcadiF40pi_2000 (run with same physics in master)
+  ![4] optimization factors calculated from calibration run E74TcadiF40pi_2000
+! Tcadi w/ VMP clouds (uncomment when model is run with VMP clouds):
+!fracClayPDFscheme=0.0319935641422 ! clay emission parameter from calibration
+!fracSiltPDFscheme=0.0456168620879 ! silt emission parameter from calibration
+  !fracClayPDFscheme = 0.028719536932 [1] * 1.114[2]
+  !fracSiltPDFscheme = 0.0489451309956[1] * 0.932[2]
+  ![1] emission parameters used for calibration run E73TcadiF40pi_2000
+  ![2] optimization factors calculated from calibration run
+
+!! Tcampi (MATRIX)
+! Tcampi w/o VMP clouds
+!fracClayPDFscheme=0.0254925492559
+!fracSiltPDFscheme=0.0442671726272
+  !fracClayPDFscheme = 0.5*0.0294128395792[1]*0.904[2] + 0.5*0.0292867845524[3]*0.833[4]
+  !fracSiltPDFscheme = 0.5*0.0518615507181[1]*0.904[2] + 0.5*0.0500018048081[3]*0.833[4]
+  ![1] emission parameters used for calibration run E20TcampF40_2000
+  ![2] optimization factor calculated from calibration run E20TcampF40_2000
+  ![3] emission parameters used for calibration run E22TcampiF40_2000
+  ![4] optimization factor calculated from calibration run E22TcampiF40_2000
+! Tcampi w/ VMP clouds
+!fracClayPDFscheme=0.0270538037899
+!fracSiltPDFscheme=0.0461063133979
+  !fracClayPDFscheme = 0.028719536932 [1] * 0.942[2]
+  !fracSiltPDFscheme = 0.0489451309956[1] * 0.942[2] 
+  ![1] emission parameters used for calibration run E21TcampF40_2000
+  ![2] optimization factor calculated from calibration run
+!-------------------------------------------------
